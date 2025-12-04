@@ -12,7 +12,7 @@ A major limitation of machine learning (ML) prediction models is that they recov
 To run the experiment code, please install the mechanism-learn package using the distribution file ``mechanism_learn-2.3.1-py3-none-any.whl`` under the directory ``./code/dist``, using:
 
 ```bash
-pip install .dist/mechanism_learn-2.3.1-py3-none-any.whl
+pip install /dist/mechanism_learn-2.3.1-py3-none-any.whl
 ```
 
 In Python, to import the mechanism learning algorithms. Using examples are demonstrated in ``./code/main expr`` folder, run: 
