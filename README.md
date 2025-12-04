@@ -24,7 +24,7 @@ import mechanism_learn.pipeline
 ## File structure and remark
 
 ```text
-supplementary material/
+./
 ├── code/
 │   ├── mechanism_learn/
 │   ├── main expr/
