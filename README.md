@@ -22,9 +22,10 @@ The main experiments were tested with:
 - `numpy`
 - `pandas`
 - `scikit-learn`
+- `tensorflow` - recommend version: 2.10.0
 - `matplotlib`
 - `grapl-causal` – for graph / ADMG utilities used in the causal weight estimation scripts (where applicable)
-- `causalbootstrapping` – for causal weighting computation and front-door causal bootstrapping
+- `causalbootstrapping` – for causal weight estimation and front-door causal bootstrapping
 
 To install the Python dependencies with `pip`, you can use for example:
 
