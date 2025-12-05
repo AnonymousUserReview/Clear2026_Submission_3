@@ -1,18 +1,43 @@
 # Clear2026_Submission_3
 This is an anomynised code repo for CLEAR2026 submission #3, entitled: Mechanism learning: reverse causal inference in the presence of multiple unknown confounding through causally weighted Gaussian mixture models
 
+This repository contains the supplementary Python code for our study. It provides:
+
+- A Python package `mechanism_learn` implementing **mechanism learning** and the full pipeline for learning predictors from deconfounded data.
+- Jupyter notebooks for the **main experiments** on fully synthetic, semi-synthetic, and real-world ICH (intracranial hemorrhage) detection tasks.
+- Additional scripts for **repeated runs**, **ablation / sensitivity analyses** (e.g., varying the number of mixture components, and **visualizations** of the learned GMMs.
+- Pre-generated datasets and data-generation scripts for all synthetic and semi-synthetic experiments, as well as processed tabular and feature data for the ICH task.
+
 ## Mechanism Learning
 
 A major limitation of machine learning (ML) prediction models is that they recover associational, rather than causal, predictive relationships between variables. In high-stakes automation applications of ML, this is problematic, as the model often learns spurious, non-causal associations. This paper proposes mechanism learning, a simple method which uses causally weighted Gaussian Mixture Models (CW-GMMs) to deconfound observational data such that any appropriate ML model is forced to learn predictive relationships between effects and their causes (reverse causal inference), despite the potential presence of multiple unknown and unmeasured confounding. Effect variables can be very high-dimensional, and the predictive relationship nonlinear, as is common in ML applications. This novel method is widely applicable: the only requirement is the existence of a set of mechanism variables mediating the cause (prediction target) and effect (feature data), which is independent of the (unmeasured) confounding variables. We test our method on fully synthetic, semi-synthetic and real-world data sets, demonstrating that it can discover reliable, unbiased, causal ML predictors, whereas the same ML predictor trained naively using classical supervised learning on the original observational data, is heavily biased by spurious associations.
 
 ## Usage instructions
 
-### Installation and import
+### Requirements
 
-To run the experiment code, please install the mechanism-learn package using the distribution file ``mechanism_learn-2.3.1-py3-none-any.whl`` under the directory ``./code/dist``, using:
+The main experiments were tested with:
+
+- Python 3.9+
+- `numpy`
+- `pandas`
+- `scikit-learn`
+- `matplotlib`
+- `grapl-causal` – for graph / ADMG utilities used in the causal weight estimation scripts (where applicable)
+- `causalbootstrapping` – for causal weighting computation and front-door causal bootstrapping
+
+To install the Python dependencies with `pip`, you can use for example:
 
 ```bash
-pip install /dist/mechanism_learn-2.3.1-py3-none-any.whl
+pip install numpy pandas scikit-learn matplotlib grapl-causal causalbootstrapping
+```
+
+### Installation and usage
+
+To run the experiment code, please also install the (local) mechanism-learn package using the distribution file ``mechanism_learn-2.3.1-py3-none-any.whl`` under the directory ``./code/dist``, using:
+
+```bash
+pip install code/dist/mechanism_learn-2.3.1-py3-none-any.whl
 ```
 
 In Python, to import the mechanism learning algorithms. Using examples are demonstrated in ``./code/main expr`` folder, run: 
@@ -21,7 +46,7 @@ In Python, to import the mechanism learning algorithms. Using examples are demon
 import mechanism_learn.pipeline 
 ```
 
-## File structure and remark
+## Repository structure and remark
 
 ```text
 ./
