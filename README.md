@@ -30,7 +30,7 @@ The main experiments were tested with:
 To install the Python dependencies with `pip`, you can use for example:
 
 ```bash
-pip install numpy pandas scikit-learn matplotlib grapl-causal causalbootstrapping tensorflow==2.10.0
+pip install numpy pandas scikit-learn matplotlib grapl-causal causalbootstrapping==0.2.0 tensorflow==2.10.0
 ```
 
 ### Installation and usage
