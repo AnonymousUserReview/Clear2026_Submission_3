@@ -1,5 +1,5 @@
-# Clear2026_Submission_3
-This is an anomynised code repo for CLEAR2026 submission #3, entitled: Mechanism learning: reverse causal inference in the presence of multiple unknown confounding through causally weighted Gaussian mixture models
+# UK AI 2026 Code Appendix
+This is an anomynised code repo for UK AI submission, entitled: Mechanism learning: reverse causal inference in the presence of multiple unknown confounding through causally weighted Gaussian mixture models
 
 This repository contains the supplementary Python code for our study. It provides:
 
